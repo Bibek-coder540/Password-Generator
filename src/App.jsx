@@ -16,7 +16,7 @@ function App() {
       if(numberAllow) str+= "0123456789"
       if(charAllow) str+= "!@#$%^&*()_-~<>,"
       for (let i = 1; i <= length; i++) {
-        let char = Math.floor(Math.random()*str.length +1)
+        let char = Math.floor(Math.random()*str.length )
          pass += str.charAt(char)
       }
       setPassword(pass)
@@ -48,7 +48,7 @@ function App() {
            value={password}
            className='outline-none w-full py-1 px-3'
            placeholder='Password'
-           readOnly
+           disabled
            ref={passwordRef}
           />
           <button
